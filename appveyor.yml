@@ -1,7 +1,16 @@
 version: 1.0.{build}
 image: Visual Studio 2015
 install:
+- cd "C:\Program Files (x86)"
+- dir msbuild.exe /s
+- cd..
+
 - ps: Set-Service wuauserv -StartupType Manual
 - choco install microsoft-build-tools
+
+- cd "C:\Program Files (x86)"
+- dir msbuild.exe /s
+- cd..
+
 build:
   verbosity: minimal
