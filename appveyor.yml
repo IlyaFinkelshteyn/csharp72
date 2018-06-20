@@ -1,6 +1,6 @@
 version: 1.0.{build}
 image: Visual Studio 2015
 install:
-- choco install microsoft-build-tools
+- choco install microsoft-build-tools -y -f
 build:
   verbosity: minimal
