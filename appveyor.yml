@@ -1,6 +1,7 @@
 version: 1.0.{build}
 image: Visual Studio 2015
 install:
-- choco install microsoft-build-tools -y -f
+- ps: Set-Service wuauserv -StartupType Manual
+- choco install microsoft-build-tools
 build:
   verbosity: minimal
